@@ -1,0 +1,20 @@
+﻿@model WeatherForecastApp.Models.SearchByCity
+
+@{
+	ViewData["Title"] = "SearchByCity";
+}
+
+<div class="container">
+	<form method="post">
+		<div class="container">
+			<h2>Sprawdź Pogodę</h2>
+			<div>
+				<input asp-for="CityName" class="form-control" placeholder="Wpisz nazwę miasta "/>
+				<button asp-controller="WeatherForecast" asp-action="SearchByCity" class="btn btn-outline-primary">
+					Sprawdź
+				</button>
+				<span asp-validation-for="CityName" class="text-danger"></span>
+			</div>
+		</div>
+	</form>
+</div>
